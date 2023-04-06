@@ -1,9 +1,5 @@
 package com.fitness.thusithgym;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,13 +9,17 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.example.thusithgym.R;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.fitness.thusithgym.R;
 
 public class DashboardActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageView menu;
-    LinearLayout fGym, homeW, payment, instructor, info, heart;
+    LinearLayout fGym, homeW, payment, instructor, info, heart, supplement;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class DashboardActivity extends AppCompatActivity {
         instructor = findViewById(R.id.instructor);
         info = findViewById(R.id.info);
         heart = findViewById(R.id.heart);
+        supplement = findViewById(R.id.supplement);
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,8 +50,8 @@ public class DashboardActivity extends AppCompatActivity {
         });
         fGym.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                recreate();
+            public void onClick(View view) {
+                redirectActivity(DashboardActivity.this, GymLocationActivity.class);
             }
         });
         homeW.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +64,13 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 redirectActivity(DashboardActivity.this, InstructorActivity.class);
+            }
+        });
+
+        supplement.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                recreate();
             }
         });
     }

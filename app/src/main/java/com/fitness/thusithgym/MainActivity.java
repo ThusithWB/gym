@@ -9,7 +9,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.example.thusithgym.R;
+import com.fitness.thusithgym.R;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textView;

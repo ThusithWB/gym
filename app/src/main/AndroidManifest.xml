@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fitness.thusithgym">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -12,19 +17,22 @@
         android:theme="@style/Theme.ThusithGym"
         tools:targetApi="31">
         <activity
-            android:name="com.fitness.thusithgym.InstructorActivity"
+            android:name=".GymLocationActivity"
             android:exported="false" />
         <activity
-            android:name="com.fitness.thusithgym.WorkoutActivity"
+            android:name=".InstructorActivity"
             android:exported="false" />
         <activity
-            android:name="com.fitness.thusithgym.DashboardActivity"
+            android:name=".WorkoutActivity"
             android:exported="false" />
         <activity
-            android:name="com.fitness.thusithgym.SignupActivity"
+            android:name=".DashboardActivity"
             android:exported="false" />
         <activity
-            android:name="com.fitness.thusithgym.MainActivity"
+            android:name=".SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +40,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBQCBc0V6Z4BaHsPcWZ2SjOjmeVxEx_eNQ"/>
+
     </application>
 
 </manifest>

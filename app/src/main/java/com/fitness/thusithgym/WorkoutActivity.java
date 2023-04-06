@@ -12,7 +12,7 @@ import android.view.WindowManager;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
-import com.example.thusithgym.R;
+import com.fitness.thusithgym.R;
 
 public class WorkoutActivity extends AppCompatActivity {
     private CardView cardView;
@@ -98,4 +98,12 @@ public class WorkoutActivity extends AppCompatActivity {
         mediaController.setAnchorView(videoView);
         videoView.setMediaController(mediaController);
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, DashboardActivity.class);
+        startActivity(intent);
+        finish(); // Optional: call finish() to close the current activity
+    }
+
 }
