@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.fitness.thusithgym">
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +17,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ThusithGym"
         tools:targetApi="31">
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".AppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BMICalculatorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WalkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HeartRateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FindSupplementActivity"
+            android:exported="false" />
         <activity
             android:name=".GymLocationActivity"
             android:exported="false" />
@@ -43,8 +68,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyBQCBc0V6Z4BaHsPcWZ2SjOjmeVxEx_eNQ"/>
-
+            android:value="AIzaSyBQCBc0V6Z4BaHsPcWZ2SjOjmeVxEx_eNQ" />
     </application>
 
 </manifest>

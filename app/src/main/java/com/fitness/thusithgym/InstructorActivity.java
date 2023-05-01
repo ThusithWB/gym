@@ -15,7 +15,6 @@ import android.widget.VideoView;
 import com.fitness.thusithgym.R;
 
 public class InstructorActivity extends AppCompatActivity {
-    private CardView cardView;
     private VideoView videoView;
     private MediaController mediaController;
 
@@ -29,29 +28,32 @@ public class InstructorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_instructor);
 
         // connect videos to cardView
-        cardView = (CardView) findViewById(R.id.coach1);
-        cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playVideo(R.raw.coach1);
-            }
-        });
+        CardView cardView1 = findViewById(R.id.coach1);
+        CardView cardView2 = findViewById(R.id.coach2);
+        CardView cardView3 = findViewById(R.id.coach3);
 
-        cardView = (CardView) findViewById(R.id.coach2);
-        cardView.setOnClickListener(new View.OnClickListener() {
+        View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                playVideo(R.raw.coach2);
+                int videoId = 0;
+                switch (v.getId()) {
+                    case R.id.coach1:
+                        videoId = R.raw.coach1;
+                        break;
+                    case R.id.coach2:
+                        videoId = R.raw.coach2;
+                        break;
+                    case R.id.coach3:
+                        videoId = R.raw.coach3;
+                        break;
+                }
+                playVideo(videoId);
             }
-        });
+        };
 
-        cardView = (CardView) findViewById(R.id.coach3);
-        cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                playVideo(R.raw.coach3);
-            }
-        });
+        cardView1.setOnClickListener(listener);
+        cardView2.setOnClickListener(listener);
+        cardView3.setOnClickListener(listener);
 
     }
 

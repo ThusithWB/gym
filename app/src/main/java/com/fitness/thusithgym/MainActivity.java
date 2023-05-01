@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(5000);
-                    startActivity(new Intent(MainActivity.this, DashboardActivity.class));
+                    startActivity(new Intent(MainActivity.this, SignupActivity.class));
                     finish();
 
                 } catch (Exception e) {
