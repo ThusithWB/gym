@@ -5,7 +5,7 @@
     android:id="@+id/activity_heart_rate"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fitness.thusithgym.HeartRateActivity">
+    tools:context="com.fitness.thusithgym.activities.HeartRateActivity">
 
     <TextView
         android:id="@+id/heart_rate_text_view"

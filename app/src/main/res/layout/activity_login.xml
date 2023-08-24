@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/image2"
-    tools:context=".LoginActivity">
+    android:background="@drawable/gymwall"
+    tools:context=".database.LoginActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtSign"
-                android:text="Create New Account"
+                android:text="              LOGIN"
                 android:textColor="@color/white"
                 android:textSize="35dp"
                 android:textStyle="bold"
@@ -37,7 +37,7 @@
                 android:padding="20dp">
 
                 <EditText
-                    android:layout_width="350dp"
+                    android:layout_width="320dp"
                     android:layout_height="60dp"
                     android:id="@+id/loginEmail"
                     android:background="@drawable/signup_border"
@@ -48,7 +48,7 @@
                     android:drawablePadding="8dp"/>
 
                 <EditText
-                    android:layout_width="350dp"
+                    android:layout_width="320dp"
                     android:layout_height="60dp"
                     android:id="@+id/loginConfirm"
                     android:background="@drawable/signup_border"
@@ -60,7 +60,7 @@
                     android:drawablePadding="8dp"/>
 
                 <Button
-                    android:layout_width="350dp"
+                    android:layout_width="320dp"
                     android:layout_height="60dp"
                     android:text="LOGIN"
                     android:id="@+id/btnLogin"
@@ -77,7 +77,7 @@
                     android:padding="8dp"
                     android:textSize="18sp"
                     android:layout_marginTop="8dp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/white"/>
 
             </LinearLayout>
 

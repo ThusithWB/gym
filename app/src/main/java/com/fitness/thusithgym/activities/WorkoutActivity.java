@@ -1,9 +1,11 @@
-package com.fitness.thusithgym;
+package com.fitness.thusithgym.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -98,7 +100,9 @@ public class WorkoutActivity extends AppCompatActivity {
     }
 
     private void playVideo(int videoId) {
-        setContentView(R.layout.activity_basic1);
+
+        // Rest of code
+        setContentView(R.layout.layout_videos);
         videoView = findViewById(R.id.videoView1);
 
         Uri uri = Uri.parse("android.resource://"+ getPackageName()+ "/" + videoId);
@@ -108,11 +112,32 @@ public class WorkoutActivity extends AppCompatActivity {
         mediaController = new MediaController(this);
         mediaController.setAnchorView(videoView);
         videoView.setMediaController(mediaController);
+
+        hideSystemUI();
+    }
+
+    private void hideSystemUI() {
+        // Set activity orientation to landscape
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+        getWindow().getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_FULLSCREEN |
+                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
+                        View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        );
+    }
+
+    private void showSystemUI() {
+        getWindow().getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE |
+                        View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
+                        View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+        );
     }
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, DashboardActivity.class);
+        Intent intent = new Intent(this, WorkoutActivity.class);
         startActivity(intent);
         finish(); // to close the current activity
     }

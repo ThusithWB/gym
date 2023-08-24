@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.fitness.thusithgym">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -18,46 +17,49 @@
         android:theme="@style/Theme.ThusithGym"
         tools:targetApi="31">
         <activity
-            android:name=".PaymentActivity"
+            android:name=".database.ScheduleActivity"
             android:exported="false" />
         <activity
-            android:name=".UserInfoActivity"
+            android:name=".database.PaymentActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".database.UserInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".database.LoginActivity"
             android:exported="true" />
         <activity
-            android:name=".AppointmentActivity"
+            android:name=".database.AppointmentActivity"
             android:exported="false" />
         <activity
-            android:name=".BMICalculatorActivity"
+            android:name=".activities.BMICalculatorActivity"
             android:exported="false" />
         <activity
-            android:name=".WalkActivity"
+            android:name=".activities.WalkActivity"
             android:exported="false" />
         <activity
-            android:name=".HeartRateActivity"
+            android:name=".activities.HeartRateActivity"
             android:exported="false" />
         <activity
-            android:name=".FindSupplementActivity"
+            android:name=".activities.FindSupplementActivity"
             android:exported="false" />
         <activity
-            android:name=".GymLocationActivity"
+            android:name=".activities.GymLocationActivity"
             android:exported="false" />
         <activity
-            android:name=".InstructorActivity"
+            android:name=".activities.InstructorActivity"
             android:exported="false" />
         <activity
-            android:name=".WorkoutActivity"
+            android:name=".activities.WorkoutActivity"
             android:exported="false" />
         <activity
-            android:name=".DashboardActivity"
+            android:name=".activities.DashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".database.SignupActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

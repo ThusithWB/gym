@@ -1,9 +1,8 @@
-package com.fitness.thusithgym;
+package com.fitness.thusithgym.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.content.Intent;

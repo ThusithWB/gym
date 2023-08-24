@@ -1,4 +1,4 @@
-package com.fitness.thusithgym;
+package com.fitness.thusithgym.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -58,7 +58,7 @@ public class InstructorActivity extends AppCompatActivity {
     }
 
     private void playVideo(int videoId) {
-        setContentView(R.layout.activity_basic1);
+        setContentView(R.layout.layout_videos);
         videoView = findViewById(R.id.videoView1);
 
         Uri uri = Uri.parse("android.resource://"+ getPackageName()+ "/" + videoId);

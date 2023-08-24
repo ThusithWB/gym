@@ -1,6 +1,5 @@
-package com.fitness.thusithgym;
+package com.fitness.thusithgym.activities;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.Sensor;
@@ -9,14 +8,12 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.fitness.thusithgym.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class WalkActivity extends AppCompatActivity implements SensorEventListener {
@@ -50,6 +47,7 @@ public class WalkActivity extends AppCompatActivity implements SensorEventListen
             }
         });
 
+        //Bottom navigation bar implementation
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.getMenu().clear(); // Clear the selection
         bottomNavigationView.inflateMenu(R.menu.bottom_menu);

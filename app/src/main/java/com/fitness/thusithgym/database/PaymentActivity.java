@@ -1,4 +1,4 @@
-package com.fitness.thusithgym;
+package com.fitness.thusithgym.database;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import com.fitness.thusithgym.R;
+import com.fitness.thusithgym.activities.DashboardActivity;
+import com.fitness.thusithgym.database.DatabaseHelper;
 
 public class PaymentActivity extends AppCompatActivity {
     private TextView priceTextView;
@@ -26,9 +30,9 @@ public class PaymentActivity extends AppCompatActivity {
 
     private String getSelectedInstructor() {
         String instructor = "";
-        DatabaseHelper dbHelper = new DatabaseHelper(this, DatabaseHelper.DATABASE_NAME_2);
+        DatabaseHelper dbHelper = new DatabaseHelper(this, DatabaseHelper.DATABASE);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT " + DatabaseHelper.COL_INSTRUCTOR + " FROM " + DatabaseHelper.TABLE_NAME_2, null);
+        Cursor cursor = db.rawQuery("SELECT " + DatabaseHelper.COL_INSTRUCTOR + " FROM " + DatabaseHelper.TABLE_NAME_USER_INFO, null);
         if (cursor.moveToFirst()) {
             int columnIndex = cursor.getColumnIndex(DatabaseHelper.COL_INSTRUCTOR);
             if (columnIndex != -1) {
@@ -40,6 +44,7 @@ public class PaymentActivity extends AppCompatActivity {
         return instructor;
     }
 
+    // Calculate the monthly fee according to instructor
     private int calculatePrice(String instructor) {
         int price = 0;
         if (instructor.equalsIgnoreCase("William")) {

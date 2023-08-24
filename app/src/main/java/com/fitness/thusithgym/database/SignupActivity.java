@@ -1,4 +1,4 @@
-package com.fitness.thusithgym;
+package com.fitness.thusithgym.database;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,7 +11,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.fitness.thusithgym.R;
 import com.fitness.thusithgym.databinding.ActivitySignupBinding;
 
 public class SignupActivity extends AppCompatActivity {
@@ -32,7 +31,7 @@ public class SignupActivity extends AppCompatActivity {
         binding = ActivitySignupBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        databaseHelper = new DatabaseHelper(this, DatabaseHelper.databaseName);
+        databaseHelper = new DatabaseHelper(this, DatabaseHelper.DATABASE);
 
         // Open the database connection
         db = databaseHelper.getWritableDatabase();

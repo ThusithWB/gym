@@ -1,15 +1,15 @@
-package com.fitness.thusithgym;
+package com.fitness.thusithgym.database;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.fitness.thusithgym.activities.DashboardActivity;
 import com.fitness.thusithgym.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        databaseHelper = new DatabaseHelper(this, DatabaseHelper.databaseName);
+        databaseHelper = new DatabaseHelper(this, DatabaseHelper.DATABASE);
 
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override

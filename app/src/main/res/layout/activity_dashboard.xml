@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/purple_200"
     android:id="@+id/drawerLayout"
-    tools:context="com.fitness.thusithgym.DashboardActivity">
+    tools:context="com.fitness.thusithgym.activities.DashboardActivity">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,7 +61,7 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/buttonHeartRate"
+                    android:id="@+id/btn_schedule"
                     android:layout_width="match_parent"
                     android:layout_height="65dp"
                     android:gravity="center"

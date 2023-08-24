@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/gymMap"
     android:name="com.google.android.gms.maps.SupportMapFragment"
-    tools:context="com.fitness.thusithgym.GymLocationActivity">
+    tools:context="com.fitness.thusithgym.activities.GymLocationActivity">
 
     <com.google.android.gms.maps.MapView
         android:id="@+id/map_view"

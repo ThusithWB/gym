@@ -1,6 +1,5 @@
-package com.fitness.thusithgym;
+package com.fitness.thusithgym.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 
 import android.content.Intent;
@@ -10,12 +9,12 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.fitness.thusithgym.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.Arrays;
@@ -55,6 +54,22 @@ public class FindSupplementActivity extends FragmentActivity implements OnMapRea
                 new LatLng(6.896846458751156, 79.86273767274025),
                 new LatLng(6.907108542010345, 79.87617539891473),
                 new LatLng(6.883832026471012, 79.87222579805117),
+                new LatLng(6.902206096622529, 79.87215625519015)
+        ));
+
+        mLocations.put("Caffeine", Arrays.asList(
+                new LatLng(7.237148142407837, 79.83924398451511),
+                new LatLng(7.096729047298699, 79.89479419210656),
+                new LatLng(6.907108542010345, 79.87617539891473),
+                new LatLng(6.883832026471012, 79.87222579805117),
+                new LatLng(6.999413663097641, 79.92486480807877)
+        ));
+
+        mLocations.put("Electrolytes", Arrays.asList(
+                new LatLng(6.86090021748296,  79.8685455343557),
+                new LatLng(6.896846458751156, 79.86273767274025),
+                new LatLng(6.907108542010345, 79.87617539891473),
+                new LatLng(6.887486885457543, 79.89189148178288),
                 new LatLng(6.902206096622529, 79.87215625519015)
         ));
 

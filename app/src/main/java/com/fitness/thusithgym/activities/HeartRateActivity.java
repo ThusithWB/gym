@@ -1,4 +1,4 @@
-package com.fitness.thusithgym;
+package com.fitness.thusithgym.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,7 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.fitness.thusithgym.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HeartRateActivity extends AppCompatActivity {
@@ -34,6 +35,7 @@ public class HeartRateActivity extends AppCompatActivity {
             sensorManager.registerListener(sensorEventListener, heartRateSensor, SensorManager.SENSOR_DELAY_NORMAL);
         }
 
+        //Bottom navigation bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.setSelectedItemId(R.id.bottom_heartRate);
 
@@ -58,6 +60,7 @@ public class HeartRateActivity extends AppCompatActivity {
         });
     }
 
+    //Heart rate monitor
     private SensorEventListener sensorEventListener = new SensorEventListener() {
         @Override
         public void onSensorChanged(SensorEvent event) {

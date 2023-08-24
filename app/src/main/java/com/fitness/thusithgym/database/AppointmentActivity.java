@@ -1,4 +1,4 @@
-package com.fitness.thusithgym;
+package com.fitness.thusithgym.database;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,11 @@ import android.widget.DatePicker;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.fitness.thusithgym.R;
+import com.fitness.thusithgym.activities.DashboardActivity;
+import com.fitness.thusithgym.activities.FindSupplementActivity;
+import com.fitness.thusithgym.activities.HeartRateActivity;
+import com.fitness.thusithgym.activities.WorkoutActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.Calendar;
@@ -22,13 +27,18 @@ public class AppointmentActivity extends AppCompatActivity {
     private TimePicker timePicker;
     private Button bookAppointmentButton;
 
+    private DatabaseHelper dbHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
+
         setContentView(R.layout.activity_appointment);
+
+        dbHelper = new DatabaseHelper(this, DatabaseHelper.TABLE_APPOINTMENT);
 
         // Initialize UI elements
         datePicker = findViewById(R.id.date_picker);
@@ -50,11 +60,16 @@ public class AppointmentActivity extends AppCompatActivity {
                 int hour = timePicker.getCurrentHour();
                 int minute = timePicker.getCurrentMinute();
 
-                // TODO: Implement appointment booking logic here
+                // Insert appointment data into the database
+                boolean success = dbHelper.insertAppointment(year, month, dayOfMonth, hour, minute);
 
-                // Show appointment booked message
-                String message = String.format("Appointment booked for %02d/%02d/%04d at %02d:%02d", dayOfMonth, month, year, hour, minute);
-                Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+                if (success) {
+                    // Show appointment booked message
+                    String message = String.format("Appointment booked for %02d/%02d/%04d at %02d:%02d", dayOfMonth, month, year, hour, minute);
+                    Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Failed to book appointment.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

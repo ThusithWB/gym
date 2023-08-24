@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fitness.thusithgym.InstructorActivity">
+    tools:context="com.fitness.thusithgym.activities.InstructorActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -50,8 +50,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/txt1"
-                    android:text="Coach 1"
+                    android:text="Tom Anderson"
+                    android:textColor="@color/purple_200"
                     android:textSize="20dp"/>
+
+                <ImageView
+                    android:layout_width="290dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/instructor1"
+                    android:src="@drawable/tom_anderson"
+                    android:layout_marginTop="22dp"
+                    android:layout_centerHorizontal="true"/>
 
             </androidx.cardview.widget.CardView>
 
@@ -82,8 +91,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/txt3"
-                    android:text="Coach 2"
+                    android:text="William Nelson"
+                    android:textColor="@color/purple_200"
                     android:textSize="20dp"/>
+
+                <ImageView
+                    android:layout_width="290dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/instructor2"
+                    android:src="@drawable/william_nelson"
+                    android:layout_marginTop="22dp"
+                    android:layout_centerHorizontal="true"/>
 
             </androidx.cardview.widget.CardView>
 
@@ -114,8 +132,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/txt5"
-                    android:text="Coach 3"
+                    android:text="Amanda Dane"
+                    android:textColor="@color/purple_200"
                     android:textSize="20dp"/>
+
+                <ImageView
+                    android:layout_width="290dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/instructor3"
+                    android:src="@drawable/amanda_dane"
+                    android:layout_marginTop="22dp"
+                    android:layout_centerHorizontal="true"/>
 
             </androidx.cardview.widget.CardView>
 

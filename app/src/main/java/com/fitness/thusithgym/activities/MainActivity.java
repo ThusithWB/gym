@@ -1,15 +1,15 @@
-package com.fitness.thusithgym;
+package com.fitness.thusithgym.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.fitness.thusithgym.R;
+import com.fitness.thusithgym.database.SignupActivity;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
