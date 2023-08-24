@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">THUSITH Gym</string>
-    <string name="google_maps_key">AIzaSyBQCBc0V6Z4BaHsPcWZ2SjOjmeVxEx_eNQ</string>
+    <string name="google_maps_key">"Add your API key"</string>
     <string name="bmi_result">Your BMI is: %.2f</string>
 </resources>
